@@ -1,0 +1,46 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Exercises</title>
+<script>
+function Button1_onclick() {
+
+	var line = "";
+	
+	for(var i=1;i<=txt1.value;i++){
+		for(var j=1;j<=i;j++){
+		line+="*";
+		}
+		line+="<br>";
+	}
+	//上方為正
+	for(var i=1;i<=txt1.value;i++){
+		for(var j=i;j<=txt1.value-1;j++){
+		line+="*";
+		}
+		line+="<br>";
+	}
+	//上方為倒三角形
+	
+	 debug.innerHTML = line;	
+}
+
+</script>
+
+
+
+</head>
+<body>
+ 	星星產生器:
+	<input type="text" id="txt1" name="txt1" value="請輸入要產生的星星數" PlaceHolder="Keyin something" size="40">
+	<br><br>
+	<input type="button" id="Button1" name="Button1"   
+		value="點我一下產生圖形" onclick="Button1_onclick()">
+	<br><br>
+	<!--txt2:-->
+ <!--   <INPUT type="text" id="txt2"  name="txt2" value="Result" size="40">-->
+ <!--   <br>-->
+    <div id="debug"></div>
+</body>
+</html
